@@ -1,4 +1,3 @@
-
 __author__ = 'irelos'
 
 
@@ -25,7 +24,7 @@ import heapq
 # 1. Continuous Time SI model with supplied pdf for each edge, weighted edge to adopt heterogeneous
 # 2. Continuous Time SIR model with supplied pdf for each edge, weighted edge to adopt heterogeneous
 
-def con_time_SI(g, source, stopRule = 0, stopParam = 0, homo = True, randompdf = random.random,*args):
+def con_time_SI(g, source, stopRule = 0, stopParam = 0, homo = True, randompdf = random.random, *args):
     """
     :param g: graph
     :param source: list of sources
@@ -135,6 +134,9 @@ def con_time_SI(g, source, stopRule = 0, stopParam = 0, homo = True, randompdf =
         for ii in range(0, len(addedNode)):
             heapq.heappush(activeNodeList,[activeTime[ii] + globalTime, addedNode[ii]])
     return infectTimeDic
+
+
+
 
 
 
